@@ -5,6 +5,7 @@
 ## probably should try and keep a cheched copy to check first and 
 ## possibly avoid an unecessary re-calculation 
 
+## you need to pass it a matrix, one that can be inversed
 makeCacheMatrix <- function(x = matrix()) {
 ## set the value of the matrix
     k <- NULL
@@ -36,15 +37,15 @@ cacheSolve <- function(x, ...) {
 ## get the inverse of the matrix        
     k <- x$getinverse()
   
-## check if there is the matrix   
+## check if there is the matrix in k    
     if(!is.null(k)) {
         message("getting cached data")
         return(k)
     }
-## if not: get the inverse of the matrix   
+## if not: get the inverse of the matrix and load into k   
     data <- x$get()
     k <- solve(data, ...)
-## set the inverse of the matrix 
+## set the inverse of the matrix (uses the solve function)
     x$setinverse(k)
     k
 }
