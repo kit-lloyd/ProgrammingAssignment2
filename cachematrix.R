@@ -1,7 +1,9 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
+## Becuase finding inverse of a matric is compute intensive you
+## probably should try and keep a cheched copy to check first and 
+## possibly avoid an unecessary re-calculation 
 
 makeCacheMatrix <- function(x = matrix()) {
 ## set the value of the matrix
