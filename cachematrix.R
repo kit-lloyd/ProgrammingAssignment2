@@ -1,11 +1,11 @@
-## Put comments here that give an overall description of what your
-## functions do
 
-## Because finding inverse of a matric is compute intensive you
+## Because finding inverse of a matrix is compute intensive you
 ## probably should try and keep a cheched copy to check first and 
-## possibly avoid an unecessary re-calculation 
+## avoid an unecessary re-calculation where possible
 
 ## you need to pass it a matrix, one that can be inversed
+## makeCacheMatrix accepts the matrix and establishes the
+## set, get, setinverse and getinverse parameters
 makeCacheMatrix <- function(x = matrix()) {
 ## set the value of the matrix
     k <- NULL
